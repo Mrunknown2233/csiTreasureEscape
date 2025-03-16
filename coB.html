@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CO-B</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 36;
+    }
+  </style>
+</head>
+<body>
+<center>
+  <h1>What is the term for the process where method calls are resolved at compile time?</h1>
+  
+  <input type="text" id="answer" placeholder="Enter your answer here">
+  <button onclick="checkAnswer()">Submit</button>
+
+  <div id="result"></div>
+</center>
+  <script>
+    const correctAnswer = "early binding"; // store the correct answer here
+
+    function checkAnswer() {
+      const userAnswer = document.getElementById("answer").value.trim().toLowerCase();
+      const resultDiv = document.getElementById("result");
+
+      if (userAnswer === correctAnswer.toLowerCase()) {
+        resultDiv.innerHTML = "🎉 Congratulations! You're correct!<br><br>The equation is: <strong>(440÷11)×4−53</strong>";
+        resultDiv.style.color = "green";
+      } else {
+        resultDiv.innerHTML = "❌ Oops! That's not correct. Try again.";
+        resultDiv.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>

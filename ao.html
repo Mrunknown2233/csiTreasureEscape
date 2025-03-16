@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AO</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 36;
+    }
+  </style>
+</head>
+<body>
+<center>
+  <h1>Which Python library is commonly used for plotting graphs?</h1>
+  
+  <input type="text" id="answer" placeholder="Enter your answer here">
+  <button onclick="checkAnswer()">Submit</button>
+
+  <div id="result"></div>
+</center>
+  <script>
+    const correctAnswer = "Matplotlib"; // store the correct answer here
+
+    function checkAnswer() {
+      const userAnswer = document.getElementById("answer").value.trim().toLowerCase();
+      const resultDiv = document.getElementById("result");
+
+      if (userAnswer === correctAnswer.toLowerCase()) {
+        resultDiv.innerHTML = "🎉 Congratulations! You're correct!<br><br>The next clue is : <strong>( 44×5 )÷2+98</strong>";
+        resultDiv.style.color = "green";
+      } else {
+        resultDiv.innerHTML = "❌ Oops! That's not correct. Try again.";
+        resultDiv.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
